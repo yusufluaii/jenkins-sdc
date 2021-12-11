@@ -4,10 +4,10 @@ pipeline{
         pollSCM('* * * * *')
     }
     stages{
-        agent{
-            label 'master'
-        }
         stage("Checkout"){
+            agent {
+                label 'master'
+            }
             steps{
                 echo "Hello Jenkins"
             }
