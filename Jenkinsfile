@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("Testing"){
             steps{
-                
+                echo "====++++Hello Jenkins++++===="
             }
             post{
                 always{
