@@ -1,6 +1,8 @@
 pipeline{
     agent none
-    
+    triggers{
+        pollSCM('* * * * *')
+    }
     stages{
         agent{
             label 'master'
