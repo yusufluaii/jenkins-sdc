@@ -1,18 +1,30 @@
 pipeline{
-    agent master
-    triggers{
-        pollSCM '* * * * *'
-    }
+    agent none
+    
     stages{
-        stage("Testing"){
-            agent {
-                docker {image 'sonarsource/sonar-scanner-cli'}
-            }
+        agent{
+            label 'master'
+        }
+        stage("Checkout"){
             steps{
-                script{
-                    sh "sonar-scanner -Dsonar.host.url=http://13.250.101.58/ -Dsonar.login=ce00cfa3d163f71332e617dc4715f8e450052ddd   -Dsonar.projectKey=jenkins-ci"
-                }
+                echo "Hello Jenkins"
             }
+        }
+        stage("Build"){
+            steps{
+                echo "Hello Jenkins"
+            }
+        }
+        stage("Test"){
+            steps{
+                echo "Hello Jenkins"
+            }
+        }
+        stage("Deploy"){
+            steps{
+                echo "Hello Jenkins"
             }
         }
     }
+    
+}
