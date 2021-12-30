@@ -22,7 +22,7 @@ pipeline {
                 script {
                   //  env.SONAR_HOST_URL="https://sonarcloud.io"
                     //env.SONAR_LOGIN="8c8dc23b1c6e305c93ed35433f44b367ea487d39"
-         sh "sonar-scanner -Dsonar.host.url=http://13.250.101.58/ -Dsonar.login=   -Dsonar.projectKey=jenkins-ci"
+         sh "sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.login=   -Dsonar.projectKey=jenkins-ci"
                 }
                  
             }
