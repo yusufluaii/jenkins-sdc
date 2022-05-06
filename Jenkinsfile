@@ -14,7 +14,7 @@ pipeline {
             }
         }
         
-        stage('Unit Testing') {
+        stage('Static Analysis') {
             agent {
                 docker { image 'sonarsource/sonar-scanner-cli' }
             }
